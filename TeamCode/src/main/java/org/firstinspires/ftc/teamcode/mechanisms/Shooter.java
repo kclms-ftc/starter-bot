@@ -10,6 +10,7 @@ import com.qualcomm.robotcore.hardware.PIDFCoefficients;
  * Controls our hardware for ejecting pollen.
  * Consists of one main launcher motor and one windmill servo for bringing pollen in.
  */
+@SuppressWarnings("FieldCanBeLocal") //Makes my code slightly more clean
 public class Shooter {
     private CRServo windmillServo;
     private DcMotorEx launcherMotor;
