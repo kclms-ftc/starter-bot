@@ -15,7 +15,7 @@ public class BasicAuto extends LinearOpMode {
 
     @Override
     public void runOpMode() {
-        // --- Initializes the drivetrain
+        // --- Initializes the drivetrain ---
 
         drivetrain.init(hardwareMap);
         telemetry.addLine("Auto Ready");
