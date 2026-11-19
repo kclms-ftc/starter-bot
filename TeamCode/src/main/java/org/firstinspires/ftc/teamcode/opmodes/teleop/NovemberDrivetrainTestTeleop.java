@@ -18,16 +18,16 @@ import org.firstinspires.ftc.teamcode.mechanisms.Shooter;
  */
 @TeleOp
 public class NovemberDrivetrainTestTeleop extends OpMode {
-    private final Intake intake = new Intake();
-    private final Shooter shooter = new Shooter();
+//    private final Intake intake = new Intake();
+//    private final Shooter shooter = new Shooter();
     private final Drivetrain drivetrain = new Drivetrain();
 
     @Override
     public void init() {
         //Initializes all subsystems
-        intake.init(hardwareMap);
+//        intake.init(hardwareMap);
         drivetrain.init(hardwareMap);
-        shooter.init(hardwareMap);
+//        shooter.init(hardwareMap);
         telemetry.addLine("Hardware initialised");
     }
 
@@ -37,7 +37,7 @@ public class NovemberDrivetrainTestTeleop extends OpMode {
         double intakePower = gamepad1.right_trigger - gamepad1.left_trigger;
         boolean shootButton = gamepad1.right_bumper;
 
-        // --- Drivetrain Code ---
+        // --- Drivetrain Code ---NovemberDrivetrainTestTeleop
         drivetrain.fieldOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
         //drivetrain.robotOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x); for testing + as contingency
 
