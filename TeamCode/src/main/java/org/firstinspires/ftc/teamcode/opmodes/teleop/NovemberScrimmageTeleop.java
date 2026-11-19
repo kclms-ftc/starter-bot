@@ -17,7 +17,7 @@ import org.firstinspires.ftc.teamcode.mechanisms.Shooter;
  *  Decrease intake - Left Trigger
  */
 @TeleOp
-public class MainTeleOp extends OpMode {
+public class NovemberScrimmageTeleop extends OpMode {
     private final Intake intake = new Intake();
     private final Shooter shooter = new Shooter();
     private final Drivetrain drivetrain = new Drivetrain();
