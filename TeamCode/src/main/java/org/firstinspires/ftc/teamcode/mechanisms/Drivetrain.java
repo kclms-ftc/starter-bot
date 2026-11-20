@@ -56,6 +56,13 @@ public class Drivetrain {
 
     }
 
+    public void setDrivetrainPower() {
+        leftFrontDrive.setPower(0.5);
+        leftBackDrive.setPower(0.5);
+        rightFrontDrive.setPower(0.5);
+        rightBackDrive.setPower(0.5);
+    }
+
     /**
      * Code for driving our robot. Drives relative to the robot's position.
      * @param forward how quickly our robot moves forward. Takes the value of the left stick's y component.

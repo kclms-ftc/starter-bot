@@ -38,8 +38,11 @@ public class NovemberDrivetrainTestTeleop extends OpMode {
         boolean shootButton = gamepad1.right_bumper;
 
         // --- Drivetrain Code ---NovemberDrivetrainTestTeleop
-        drivetrain.fieldOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
-        //drivetrain.robotOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x); for testing + as contingency
+        if (gamepad1.a) {
+            drivetrain.setDrivetrainPower();
+        } else {
+            drivetrain.robotOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
+        }
 
         // --- Shooter Code ---
 //        shooter.shooterSequence(shootButton);
