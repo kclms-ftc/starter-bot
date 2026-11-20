@@ -8,7 +8,7 @@ import org.firstinspires.ftc.teamcode.mechanisms.Intake;
 import org.firstinspires.ftc.teamcode.mechanisms.Shooter;
 
 /**
- * The main TeleOp which brings our subsystems together.
+ * The main TeleOp which brings our subsystems together. Uses a field-centric drive.
  * Our controls are as such:
  *  Velocity - Left stick x and y
  *  Rotation - Right stick x
