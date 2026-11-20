@@ -18,14 +18,14 @@ import org.firstinspires.ftc.teamcode.mechanisms.Shooter;
  */
 @TeleOp
 public class NovemberDrivetrainTestTeleop extends OpMode {
-//    private final Intake intake = new Intake();
+    private final Intake intake = new Intake();
 //    private final Shooter shooter = new Shooter();
     private final Drivetrain drivetrain = new Drivetrain();
 
     @Override
     public void init() {
         //Initializes all subsystems
-//        intake.init(hardwareMap);
+        intake.init(hardwareMap);
         drivetrain.init(hardwareMap);
 //        shooter.init(hardwareMap);
         telemetry.addLine("Hardware initialised");
@@ -35,7 +35,7 @@ public class NovemberDrivetrainTestTeleop extends OpMode {
     public void loop() {
         // --- Mapping our inputs to variablezini ---
         double intakePower = gamepad1.right_trigger - gamepad1.left_trigger;
-        boolean shootButton = gamepad1.right_bumper;
+//        boolean shootButton = gamepad1.right_bumper;
 
         // --- Drivetrain Code ---NovemberDrivetrainTestTeleop
         drivetrain.fieldOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
@@ -49,12 +49,12 @@ public class NovemberDrivetrainTestTeleop extends OpMode {
 //        if (readyToShoot) {
 //            intakePower += 0.5;
 //        }
-//        intake.setPower(intakePower);
+        intake.setPower(intakePower);
 
 
         // --- Telemetry ---
         telemetry.addData("Triggers", "left (%.2f), right (%.2f)",gamepad1.left_trigger, gamepad1.right_trigger);
-//        telemetry.addData("Intake Power", "%.2f", intakePower);
+        telemetry.addData("Intake Power", "%.2f", intakePower);
 //        telemetry.addData("Currently shooting", readyToShoot);
     }
 }
