@@ -24,16 +24,15 @@ public class Shooter {
      */
     public void init(HardwareMap hwMap) {
         //Initializes each motor and our imu for field centric driving.
-        launcherMotor = hwMap.get(DcMotorEx.class, "launcher");
+        launcherMotor = hwMap.get(DcMotorEx.class, "launcherMotor");
         windmillServo = hwMap.get(CRServo.class, "windmillServo");
 
         //Changes some settings on the intake motor to increase accuracy
         launcherMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         launcherMotor.setPIDFCoefficients(DcMotor.RunMode.RUN_USING_ENCODER, new PIDFCoefficients(40, 0, 0, 12.5));
 
-        //Reverses the windmill servo so it takes pollen inwards.
+        //Starts the windmill servo at 0 power.
         windmillServo.setPower(0);
-        windmillServo.setDirection(DcMotorSimple.Direction.REVERSE);
     }
 
     /**

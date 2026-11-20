@@ -35,7 +35,7 @@ public class Intake {
         intakeMotor.setPower(0);
 
         //Ensures both the left and the right servos act in the same direction.
-        rightIntakeServo.setDirection(DcMotorSimple.Direction.REVERSE);
+        leftIntakeServo.setDirection(DcMotorSimple.Direction.REVERSE);
 
         //Causes the motor to slow down faster, creating a more controllable intake.
         intakeMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);

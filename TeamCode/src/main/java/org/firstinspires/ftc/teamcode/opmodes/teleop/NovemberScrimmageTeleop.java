@@ -39,7 +39,7 @@ public class NovemberScrimmageTeleop extends OpMode {
 
         // --- Drivetrain Code ---
         drivetrain.fieldOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
-        //drivetrain.robotOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x); for testing + as contingency
+//        drivetrain.robotOrientedDrive(-gamepad1.left_stick_y,gamepad1.left_stick_x,gamepad1.right_stick_x);
 
         // --- Shooter Code ---
         shooter.shooterSequence(shootButton);
